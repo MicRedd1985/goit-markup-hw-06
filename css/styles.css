@@ -1089,24 +1089,16 @@ img {
   appearance: none;
 }
 
-.policy-input:checked + .policy-icon {
-  background-image: url(../images/icon-check-1.svg);
-  
-}
-
-.policy-input:focus + .policy-icon {
-  outline: 2px solid var(--second-logo-color);
-  border-radius: 2px;
-  background-image: url(../images/icon-check.svg);
-  
-  
-}
-
 .policy-input:checked:focus + .policy-icon {
   
   background-image: url(../images/icon-check-1.svg);
   background-color: var(--link-color);
-  
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--link-color);
+  background-repeat: no-repeat;
+  cursor: pointer;
+ 
 }
 
 .policy-icon {
