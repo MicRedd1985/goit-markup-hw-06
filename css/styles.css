@@ -904,7 +904,7 @@ img {
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--secondary-text-color);
 }
 
 .subscribe-label:focus-within .subscribe-input {
@@ -994,12 +994,18 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     
   }
+
+  .modal-button:hover,
+.modal-button:focus {
+
+  fill: var(--link-color);
+
+}
   
   /* modal form */
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 448px;
   margin-top: 12px;
 }
@@ -1008,6 +1014,7 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  
 
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -1018,8 +1025,8 @@ img {
 
   margin-bottom: 10px;
 
-  display: flex;
-  flex-direction: column;
+  display: block;
+  
   text-align: start;
 
   font-weight: 400;
@@ -1030,11 +1037,13 @@ img {
 }
 
 .signup-input {
+  width: 100%;
   padding: 12px 42px;
   margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
 }
 
 .signup-label:focus-within .signup-input,
@@ -1089,30 +1098,28 @@ img {
   appearance: none;
 }
 
-.policy-input:checked:focus + .policy-icon {
-  
+.policy-input:checked + .policy-icon {
   background-image: url(../images/icon-check-1.svg);
   background-color: var(--link-color);
-  background-size: contain;
-  background-origin: border-box;
   border-color: var(--link-color);
-  background-repeat: no-repeat;
+  background-size: contain;
+  
   cursor: pointer;
- 
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .policy-icon {
   position: absolute;
-
+  display: inline-block;
   cursor: pointer;
-
   top: 0;
   left: -20px;
   width: 16px;
   height: 15px;
-
-  background-image: url(../images/icon-disable.svg);
-  background-size: cover;
+  margin-right: 7px;
+  border: 2px solid #212121;
+    border-radius: 4px;
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1154,6 +1161,9 @@ img {
   background-color: var(--link-bg-color);
 }
  
+textarea {
+    height: 120px;
+  }
 
 
   
